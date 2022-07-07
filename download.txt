@@ -1,0 +1,7 @@
+https://www.st.com/en/embedded-software/stm32-standard-peripheral-libraries.html
+
+https://github.com/libopencm3/libopencm3/wiki
+https://github.com/libopencm3/libopencm3.git
+https://github.com/libopencm3/libopencm3-examples.git
+https://github.com/libopencm3/libopencm3-miniblink.git
+
