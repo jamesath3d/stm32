@@ -1,13 +1,12 @@
 #!/bin/bash
 
-dst=stm32.mksquashfs
-if [ -f "${dst}" ]
-then
-    echo
-    echo "file (${dst}) exist ! rename it and re-run."
-    echo
-else
-    echo
-    time mksquashfs_example.sh stm32/ ${dst}
-    echo
-fi
+dateX1=$(LC_ALL=C date +%Y_%m%d_%H%M%P_%S)
+
+for aa1 in stm32 stm32__git_dir
+do
+    src=${aa1}
+    dst=${aa1}_${dateX1}.mksquashfs
+    echo "time mksquashfs_example.sh ${src}/ ${dst}"
+    time       mksquashfs_example.sh ${src}/ ${dst}
+done
+
