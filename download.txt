@@ -4,4 +4,5 @@ https://github.com/libopencm3/libopencm3/wiki
 https://github.com/libopencm3/libopencm3.git
 https://github.com/libopencm3/libopencm3-examples.git
 https://github.com/libopencm3/libopencm3-miniblink.git
+####     apt install gcc-arm-none-eabi
 
