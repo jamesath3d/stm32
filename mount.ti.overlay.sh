@@ -4,9 +4,9 @@ umount /home/ti/ti/                   &>/dev/null
 umount /tmp/ti/lower                  &>/dev/null
 umount /home/ti/ti.mksquashfs         &>/dev/null
 
-mkdir -p   /tmp/ti/lower
-mkdir -p   /tmp/ti/upper
-mkdir -p   /tmp/ti/work
+su - ti --command -- "mkdir -p   /tmp/ti/lower" 2>/dev/null
+su - ti --command -- "mkdir -p   /tmp/ti/upper" 2>/dev/null
+su - ti --command -- "mkdir -p   /tmp/ti/work" 2>/dev/null
 
 if [ "$1" = 'm' -o "$1" = 'mount' ]; then
 

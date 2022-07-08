@@ -5,9 +5,10 @@ umount /home/ti/stm32/                   &>/dev/null
 umount /tmp/stm32/lower                  &>/dev/null
 umount /home/ti/stm32.mksquashfs         &>/dev/null
 
-mkdir -p   /tmp/stm32/lower
-mkdir -p   /tmp/stm32/upper
-mkdir -p   /tmp/stm32/work
+# su - ti --command -- "mkdir -p  /tmp/kkzz"
+su - ti --command -- "mkdir -p   /tmp/stm32/lower" 2>/dev/null
+su - ti --command -- "mkdir -p   /tmp/stm32/upper" 2>/dev/null
+su - ti --command -- "mkdir -p   /tmp/stm32/work" 2>/dev/null
 
 if [ "$1" = 'm' -o "$1" = 'mount' ]; then
 
@@ -25,9 +26,9 @@ umount /home/ti/stm32__git_dir/                   &>/dev/null
 umount /tmp/stm32__git_dir/lower                  &>/dev/null
 umount /home/ti/stm32__git_dir.mksquashfs         &>/dev/null
 
-mkdir -p   /tmp/stm32__git_dir/lower
-mkdir -p   /tmp/stm32__git_dir/upper
-mkdir -p   /tmp/stm32__git_dir/work
+su - ti --command -- "mkdir -p   /tmp/stm32__git_dir/lower" 2>/dev/null
+su - ti --command -- "mkdir -p   /tmp/stm32__git_dir/upper" 2>/dev/null
+su - ti --command -- "mkdir -p   /tmp/stm32__git_dir/work" 2>/dev/null
 
 if [ "$1" = 'm' -o "$1" = 'mount' ]; then
 
